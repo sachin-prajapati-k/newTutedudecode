@@ -1,0 +1,43 @@
+:root {
+  --light-green: #47ff75;
+  --light-blue: rgb(93, 82, 248);
+  --light-grey: rgb(173, 173, 173);
+
+  --text-dark: black;
+  --text-white: white;
+  --text-light: lightgrey;
+
+  --bg-dark: grey;
+  --bg-light: lightgrey;
+  --bg-white: white;
+}
+
+.portfolio-card {
+  max-width: 350px;
+  margin: 10px auto;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+.portfolio-header {
+  background: linear-gradient(135deg, lightblue 0%, lightgreen 100%);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.portfolio-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+.header-decoration {
+  background-color: white;
+  width: 100px;
+  height: 3px;
+  border-radius: 3px;
+  margin: 10px auto;
+}
