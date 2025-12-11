@@ -1,4 +1,4 @@
-import "./PortfolioCart.css";
+import Styles from "./PortfolioCart.module.css";
 
 function Header() {
   return (

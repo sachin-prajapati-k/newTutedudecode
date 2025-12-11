@@ -1,9 +1,9 @@
 import "./App.css";
-import PortfolioCard from "./Components/PortfilioCard";
+import ProductList from "./Components New/ProductCard/ProductList";
 function App() {
   return (
     <div className="App">
-      <PortfolioCard />
+      <ProductList />
     </div>
   );
 }
