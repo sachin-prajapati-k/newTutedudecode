@@ -9,7 +9,7 @@ function PortfolioCard() {
     <>
       <div className="portfolio-card">
         <Header />
-        <div>
+        <div className="portfolio-img">
           <Avatar />
         </div>
         <div>

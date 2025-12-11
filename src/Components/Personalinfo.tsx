@@ -4,10 +4,10 @@ function Personalinfo() {
   const location = "Noida";
   const email = "sachin13579p@gmail.com";
   return (
-    <div>
-      <h4>{name}</h4>
-      <h5>{roll}</h5>
-      <h6>{location}</h6>
+    <div style={{ lineHeight: "15px" }}>
+      <h1>{name}</h1>
+      <h2>{roll}</h2>
+      <h2>{location}</h2>
       <p>{email}</p>
     </div>
   );
