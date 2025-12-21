@@ -1,10 +1,8 @@
-import { useState } from "react";
-import { MovieData } from "../../MovieData.tsx/Data";
-import Movies from "../../Pages/MoviePage";
-
-export default function SearchFilter({ Title = "Bollywod Hits" }: any) {
-  const [searchText, setSearchText] = useState("");
-
+export default function SearchFilter({ 
+  Title = "Bollywod Hits", 
+  searchText, 
+  setSearchText 
+}: any) {
   return (
     <>
       <div className="mt-3 container flex-column align-items-center text-white ">
@@ -16,6 +14,7 @@ export default function SearchFilter({ Title = "Bollywod Hits" }: any) {
             className="form-control w-50 w-lg-50 w-sm-25"
             type="text"
             placeholder="Searh here"
+            value={searchText}
             onChange={(e) => setSearchText(e.target.value)}
           />
         </div>
