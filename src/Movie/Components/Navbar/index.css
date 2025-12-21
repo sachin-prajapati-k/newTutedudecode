@@ -39,3 +39,25 @@
   transition: 0.1s;
 }
 
+.filter-btn{
+  border: 2px solid yellow;
+  background-color: transparent;
+  box-shadow: 0px 4px 4px rgb(0, 0, 0);
+}
+.filter-btn:hover{
+  background-color: violet;
+  border: #9d01d1;
+  color: black;
+  box-shadow: 0px 6px 6px rgb(0, 0, 0);
+}
+
+.input-box{
+ border-radius: 50px;
+height: 50px;
+margin-bottom: 5px;
+  box-shadow: 0px 4px 4px rgb(0, 0, 0);
+}
+.input-box:focus {
+  outline: none;
+  box-shadow: 0px 0px 10px rgba(157, 1, 209, 0.8);
+}

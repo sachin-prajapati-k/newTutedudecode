@@ -3,6 +3,7 @@ import MovieCard from "../../Components/MovieCard/MovieCard";
 import { IMovieTypes } from "../../../types";
 import SearchFilter from "../../Components/Search&filterButtons";
 import { useState } from "react";
+import GenreFilter from "../../Components/Search&filterButtons/GenreFilter";
 export default function Movies() {
   const [searchText, setSearchText] = useState("");
   const [Movies, setMovies] = useState(MovieData);
@@ -26,6 +27,7 @@ export default function Movies() {
         setSearchText={setSearchText}
         searchlenght={searchlenght}
       />
+      <GenreFilter/>
       <div className="d-flex flex-wrap align-items-center justify-content-center row-col-2">
         {filteredData.map((Movie: IMovieTypes) => (
           <MovieCard key={Movie.id} {...Movie} />
