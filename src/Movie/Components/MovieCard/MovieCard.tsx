@@ -14,7 +14,7 @@ export default function MovieCard({ ...MovieData }: IMovieTypes) {
   return (
     <>
       <div className="m-5 ">
-        <div className="card card-box ">
+        <div className="card card-box h-100">
           <div className="card-header fw-bold ">{title}</div>
           <div className="card-img-top poster-img m-0">
             {poster_url ? (
@@ -29,8 +29,11 @@ export default function MovieCard({ ...MovieData }: IMovieTypes) {
             </span>
             <p>{release_year}</p>
             <p className="card-text description">{description}</p>
-            <div className="text-center">
-            <Button className="">IMDB Rating: {imdb_rating} / 10</Button></div>
+            <div className="text-center mt-auto">
+              <Button className="rating">
+                IMDB Rating: {imdb_rating} / 10
+              </Button>
+            </div>
           </div>
         </div>
         <div className="card-footer"></div>
