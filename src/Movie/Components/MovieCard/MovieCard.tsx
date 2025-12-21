@@ -1,7 +1,7 @@
 import Button from "react-bootstrap/esm/Button";
 import { IMovieTypes } from "../../../types";
 import "./MovieCard.d.css";
-import { useMemo } from "react";
+
 export default function MovieCard({ ...MovieData }: IMovieTypes) {
   const {
     title,

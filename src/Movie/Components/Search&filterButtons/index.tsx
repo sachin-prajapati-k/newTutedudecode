@@ -1,11 +1,12 @@
-export default function SearchFilter({ 
-  Title = "Bollywod Hits", 
-  searchText, 
-  setSearchText 
+export default function SearchFilter({
+  Title = "Bollywod Hits",
+  searchText,
+  setSearchText,
+  searchlenght,
 }: any) {
   return (
     <>
-      <div className="mt-3 container flex-column align-items-center text-white ">
+      <div className="mt-2 p-0 container flex-column align-items-center text-white ">
         <div className="m-0">
           <h1 style={{ color: "yellow" }}>{Title}</h1>
         </div>
@@ -18,7 +19,9 @@ export default function SearchFilter({
             onChange={(e) => setSearchText(e.target.value)}
           />
         </div>
-        <p className="mt-1">Founded no. results for "{searchText}"</p>
+        <p className="mt-1">
+          Founded {searchlenght} results for "{searchText}"
+        </p>
       </div>
     </>
   );
