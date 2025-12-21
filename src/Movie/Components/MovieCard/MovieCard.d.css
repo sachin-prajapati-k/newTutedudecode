@@ -4,6 +4,12 @@
     width: 250px;
     box-shadow: 0px 5px 5px 5px rgb(85, 95, 95);
     color: white;
+  display: flex;
+  flex-direction: column;
+    /* ensure a reasonable minimum height so the button has space to be pushed down;
+     adjust as needed or remove if parent provides height */
+  min-height: 420px;
+  height: 100%;
 }
 
 .card-box:hover{
@@ -37,3 +43,13 @@
   position: relative;
   bottom:0px;
  }
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto; /* allow body to grow so mt-auto works */
+}
+
+.card-body .text-center {
+  margin-top: auto; /* ensures this block (the button) sits at the bottom */
+}
