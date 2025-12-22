@@ -12,6 +12,16 @@ export default function MovieCard({ ...MovieData }: IMovieTypes) {
     poster_url,
     language,
   } = MovieData;
+  const buttonColor = (imdb_rating: string | number): string => {
+    const rating = Number(imdb_rating);
+
+    if (Number.isNaN(rating)) return "gray";
+    if (rating >= 10) return "green";
+    if (rating > 8) return "lightgreen";
+    if (rating > 4) return "orange";
+
+    return "red";
+  };
 
   return (
     <>
@@ -32,7 +42,13 @@ export default function MovieCard({ ...MovieData }: IMovieTypes) {
             <p>{release_year}</p>
             <p className="card-text description">{description}</p>
             <div className="text-center mt-auto">
-              <Button className="rating">
+              <Button
+                className="rating"
+                style={{
+                  backgroundColor: buttonColor(imdb_rating),
+                  color: "black",
+                }}
+              >
                 IMDB Rating: {imdb_rating} / 10
               </Button>
             </div>

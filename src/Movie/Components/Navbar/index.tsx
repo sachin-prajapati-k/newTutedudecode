@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./index.css";
 
 export default function NavBar() {
@@ -5,29 +6,31 @@ export default function NavBar() {
     <>
       <div className="container-fluid bg-purple-custom d-flex flex-wrap-sm  align-items-center justify-content-between h-100 p-3 ">
         <div className="site-brand align-items-center d-flex gap-2">
-          <div>Logo</div>
-          <div className="brand-name">BrandName</div>
+          <Link to="/" className="text-decoration-none d-flex align-items-center gap-2">
+            <div>Logo</div>
+            <div className="brand-name">BrandName</div>
+          </Link>
         </div>
         <div className=" gap-2 row  me-4 ">
           <div className="nav-item col-auto  btn-round">
-            <a href="www.google.com" target="blank" className="nav-link">
+            <Link to="/" className="nav-link">
               Home
-            </a>
+            </Link>
           </div>
           <div className="nav-item col-auto btn-round">
-            <a href="www.google.com" className="nav-link">
-              Songs
-            </a>
+            <Link to="/movies" className="nav-link">
+              Movies
+            </Link>
           </div>
           <div className="nav-item col-auto  btn-round">
-            <a href="www.google.com" className="nav-link">
+            <Link to="/movies" className="nav-link">
               Web Series
-            </a>
+            </Link>
           </div>
           <div className="nav-item col-auto  btn-round">
-            <a href="www.google.com" className="nav-link">
+            <Link to="/movies" className="nav-link">
               TV Shows
-            </a>
+            </Link>
           </div>
         </div>
       </div>
