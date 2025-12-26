@@ -3,15 +3,15 @@ import MovieCard from "../../Components/MovieCard/MovieCard";
 import { IMovieTypes } from "../../../types";
 import SearchFilter from "../../Components/Search&filterButtons";
 import GenreFilter from "../../Components/Search&filterButtons/GenreFilter";
-import { WebSeriesData } from "../../MovieData.tsx/WebSeriesData";
+import { TVShowsData } from "../../MovieData.tsx/TvShowsData";
 
-export default function WebSeries() {
+export default function TvShows() {
   const [searchText, setSearchText] = useState("");
   const [selectedGenre, setSelectedGenre] = useState("all");
 
   const genres = [
     "All",
-    ...new Set(WebSeriesData.flatMap((item: any) => item.genre ?? [])),
+    ...new Set(TVShowsData.flatMap((item: any) => item.genre ?? [])),
   ];
 
   const handleFilterButton = (searchGenre: string) => {
@@ -22,32 +22,28 @@ export default function WebSeries() {
     }
   };
 
-  const filteredWebSeries = WebSeriesData.filter((series: any) => {
+  const filteredTvShows = TVShowsData.filter((shows: any) => {
     const searchLower = searchText.toLowerCase();
 
     const matchesSearch =
       !searchLower ||
-      series.title.toLowerCase().includes(searchLower) ||
-      series.description.toLowerCase().includes(searchLower) ||
-      series.genre?.some((g: string) =>
-        g.toLowerCase().includes(searchLower)
-      ) ||
-      series.language.toLowerCase().includes(searchLower) ||
-      String(series.release_year).toLowerCase().includes(searchLower) ||
-      series.cast?.some((c: string) => c.toLowerCase().includes(searchLower));
+      shows.title.toLowerCase().includes(searchLower) ||
+      shows.description.toLowerCase().includes(searchLower) ||
+      shows.genre?.some((g: string) => g.toLowerCase().includes(searchLower)) ||
+      shows.language.toLowerCase().includes(searchLower) ||
+      String(shows.release_year).toLowerCase().includes(searchLower) ||
+      shows.cast?.some((c: string) => c.toLowerCase().includes(searchLower));
 
     // const matchesYear= !searchLower || movie.year
 
     const matchesGenre =
       selectedGenre === "all" ||
-      series.genre?.some((g: string) =>
-        g.toLowerCase().includes(selectedGenre)
-      );
+      shows.genre?.some((g: string) => g.toLowerCase().includes(selectedGenre));
 
     return matchesSearch && matchesGenre;
   });
 
-  const searchlenght = filteredWebSeries.length;
+  const searchlenght = filteredTvShows.length;
 
   return (
     <>
@@ -58,9 +54,9 @@ export default function WebSeries() {
       />
       <GenreFilter handleFilterButton={handleFilterButton} genres={genres} />
       <div className="d-flex flex-wrap align-items-center justify-content-center  row-col-2">
-        {filteredWebSeries.length > 0 ? (
-          filteredWebSeries.map((Series: IMovieTypes) => (
-            <MovieCard key={Series.id} {...Series} />
+        {filteredTvShows.length > 0 ? (
+          filteredTvShows.map((Shows: IMovieTypes) => (
+            <MovieCard key={Shows.id} {...Shows} />
           ))
         ) : (
           <div className="text-center mt-4 " style={{ color: "rosybrown" }}>

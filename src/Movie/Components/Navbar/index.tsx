@@ -1,19 +1,20 @@
-import { Link, Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./index.css";
+import logo from "../../../assests/logo.png";
 
 export default function NavBar() {
-  const Home = () => {
-    <Navigate to={"/home"} />;
-  };
-  const Movie = () => {
-    <Navigate to={"/movies"} />;
-  };
-  const webSeries = () => {
-    <Navigate to="/web-series" />;
-  };
-  const tvShows = () => {
-    <Navigate to={"/tv-shows"} />;
-  };
+  // const Home = () => {
+  //   <Navigate to={"/home"} />;
+  // };
+  // const Movie = () => {
+  //   <Navigate to={"/movies"} />;
+  // };
+  // const webSeries = () => {
+  //   <Navigate to="/web-series" />;
+  // };
+  // const tvShows = () => {
+  //   <Navigate to={"/tv-shows"} />;
+  // };
   return (
     <>
       <div className="container-fluid bg-purple-custom d-flex flex-wrap-sm  align-items-center justify-content-between h-100 p-3 ">
@@ -22,13 +23,15 @@ export default function NavBar() {
             to="/"
             className="text-decoration-none d-flex align-items-center gap-2"
           >
-            <div>Logo</div>
-            <div className="brand-name">BrandName</div>
+            <img src={logo} alt="Logo" className="logo-img" />
+            <div className="brand-name-background">
+              <div className="brand-Name">Movie Flex</div>
+            </div>
           </Link>
         </div>
         <div className=" gap-2 row  me-4 ">
           <div className="nav-item col-auto  btn-round">
-            <Link to="/home" onClick={Home} className="nav-link">
+            <Link to="/home" className="nav-link">
               Home
             </Link>
           </div>

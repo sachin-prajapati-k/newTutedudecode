@@ -1,5 +1,5 @@
-import NavBar from "../../Components/Navbar";
 import Movies from "../MoviePage";
+import TvShows from "../TvShowsPage";
 import WebSeries from "../WebSeriesHomePag";
 
 export default function MovieHomePage() {
@@ -7,6 +7,7 @@ export default function MovieHomePage() {
     <>
       <Movies />
       <WebSeries />
+      <TvShows />
     </>
   );
 }

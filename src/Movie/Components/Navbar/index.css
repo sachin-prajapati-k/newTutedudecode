@@ -13,11 +13,16 @@
   width: 100%;
 }
 
-.brandName {
+.brand-Name {
   font-size: 1.5rem;
   font-weight: bold;
-  color: white;
-  margin-left: 1rem;
+  color: transparent;
+  /* margin-left: 1rem; */
+  
+}
+.brand-name-background{
+  background: linear-gradient(120deg,cyan,green, red,yellow,pink);
+background-clip: text;
 }
 
 .btn-round {
@@ -64,6 +69,17 @@ margin-bottom: 5px;
 .input-box:focus {
   outline: none;
   box-shadow: 0px 0px 10px rgba(157, 1, 209, 0.8);
+}
+
+.logo-img {
+  height: 40px;
+  width: auto;
+  object-fit: cover;
+ mix-blend-mode: multiply;
+ scale: 1.6;
+ /* filter: brightness(1); */
+  
+
 }
 
 @media (max-width: 576px) {
