@@ -2,8 +2,8 @@ import { useState } from "react";
 import { MovieData } from "../../MovieData.tsx/MovieData";
 import MovieCard from "../../Components/MovieCard/MovieCard";
 import { IMovieTypes } from "../../../types";
-import SearchFilter from "../../Components/Search&filterButtons";
-import GenreFilter from "../../Components/Search&filterButtons/GenreFilter";
+import SearchFilter from "../../Components/Search&FilterComponents";
+import GenreFilter from "../../Components/Search&FilterComponents/GenreFilter";
 
 export default function Movies() {
   const [searchText, setSearchText] = useState("");

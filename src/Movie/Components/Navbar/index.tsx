@@ -3,6 +3,7 @@ import "./index.css";
 import logo from "../../../assests/logo.png";
 import { Button, ButtonGroup } from "react-bootstrap";
 import { useState } from "react";
+import FilterBox from "../CombineFilterComponent";
 
 export default function NavBar() {
   const [active, setActive] = useState(1);
@@ -19,6 +20,7 @@ export default function NavBar() {
   // const tvShows = () => {
   //   <Navigate to={"/tv-shows"} />;
   // };
+  FilterBox(active);
   return (
     <>
       <div className="container-fluid bg-purple-custom d-flex flex-wrap-sm  align-items-center justify-content-between h-100 p-3 ">
