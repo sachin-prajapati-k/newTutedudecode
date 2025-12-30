@@ -1,8 +1,8 @@
 import { useState } from "react";
 import MovieCard from "../../Components/MovieCard/MovieCard";
 import { IMovieTypes } from "../../../types";
-import SearchFilter from "../../Components/Search&FilterComponents";
-import GenreFilter from "../../Components/Search&FilterComponents/GenreFilter";
+import SearchFilter from "../../Components/FilterComponents/Search&FilterComponents";
+import GenreFilter from "../../Components/FilterComponents/Search&FilterComponents/GenreFilter";
 import { WebSeriesData } from "../../MovieData.tsx/WebSeriesData";
 
 export default function WebSeries() {

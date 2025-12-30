@@ -4,11 +4,13 @@ import MovieHomePage from "../Movie/Pages/HomePage";
 import NavBar from "../Movie/Components/Navbar";
 import WebSeries from "../Movie/Pages/WebSeriesHomePag";
 import TvShows from "../Movie/Pages/TvShowsPage";
+import FilterBox from "../Movie/Components/FilterComponents/Filter&ShortBox";
 
 export default function MyRouting() {
   return (
     <Router>
       <NavBar />
+      <FilterBox />
       <Routes>
         <Route path="/" element={<MovieHomePage />} />
         <Route path="/home" element={<MovieHomePage />} />

@@ -5,6 +5,18 @@ export default function GenreFilter({
   handleFilterButton,
   genres = [],
 }: any) {
+  // const genres = [
+  //   "All",
+  //   ...new Set(MovieData.flatMap((item: any) => item.genre ?? [])),
+  // ];
+
+  // const handleFilterButton = (searchGenre: string) => {
+  //   if (searchGenre === "all") {
+  //     setSelectedGenre("all");
+  //   } else {
+  //     setSelectedGenre(searchGenre);
+  //   }
+  // };
   return (
     <>
       <div

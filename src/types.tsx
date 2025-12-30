@@ -28,4 +28,8 @@ export interface IMovieTypes {
   poster_url?: string;
   trailer_url?: string;
   watch_url?: string;
+  duration_seconds?: number;
+  popularity?: number;
+  artist?: string;
+  album?: string;
 }
