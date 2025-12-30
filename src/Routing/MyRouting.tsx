@@ -5,19 +5,22 @@ import NavBar from "../Movie/Components/Navbar";
 import WebSeries from "../Movie/Pages/WebSeriesHomePag";
 import TvShows from "../Movie/Pages/TvShowsPage";
 import FilterBox from "../Movie/Components/FilterComponents/Filter&ShortBox";
+import { FilterProvider } from "../Movie/Components/FilterComponents/FilterContext";
 
 export default function MyRouting() {
   return (
     <Router>
-      <NavBar />
-      <FilterBox />
-      <Routes>
-        <Route path="/" element={<MovieHomePage />} />
-        <Route path="/home" element={<MovieHomePage />} />
-        <Route path="/movies" element={<Movies />} />
-        <Route path="/web-series" element={<WebSeries />} />
-        <Route path="/tv-shows" element={<TvShows />} />
-      </Routes>
+      <FilterProvider>
+        <NavBar />
+        <FilterBox />
+        <Routes>
+          <Route path="/" element={<MovieHomePage />} />
+          <Route path="/home" element={<MovieHomePage />} />
+          <Route path="/movies" element={<Movies />} />
+          <Route path="/web-series" element={<WebSeries />} />
+          <Route path="/tv-shows" element={<TvShows />} />
+        </Routes>
+      </FilterProvider>
     </Router>
   );
 }

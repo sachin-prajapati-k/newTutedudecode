@@ -26,16 +26,16 @@ export function FilterProvider({ children }: { children: React.ReactNode }) {
   }, [rawData]);
 
   const filterData = useMemo(() => {
-    rawData.filter((item) => {
+    return rawData.filter((item) => {
       const searchLower = search.toLowerCase();
       const matchesSearch =
         !searchLower ||
-        item.title.toLowerCase().includes(searchLower) ||
-        item.description.toLowerCase().includes(searchLower) ||
+        item.title?.toLowerCase().includes(searchLower) ||
+        item.description?.toLowerCase().includes(searchLower) ||
         item.genre?.some((g: string) =>
           g.toLowerCase().includes(searchLower)
         ) ||
-        item.language.toLowerCase().includes(searchLower) ||
+        item.language?.toLowerCase().includes(searchLower) ||
         String(item.release_year).toLowerCase().includes(searchLower) ||
         item.cast?.some((c: string) => c.toLowerCase().includes(searchLower));
 
