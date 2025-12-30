@@ -2,9 +2,8 @@ export default function SearchFilter({
   Title = "Bollywod Hits",
   searchText,
   setSearchText,
-  searchlenght,
+  searchlenght = 4,
 }: any) {
-  
   // const filteredMovies = MovieData.filter((movie: any) => {
   //   const searchLower = searchText.toLowerCase();
 

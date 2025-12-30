@@ -4,16 +4,16 @@ import MovieCard from "../../Components/MovieCard/MovieCard";
 import { IMovieTypes } from "../../../types";
 import SearchFilter from "../../Components/FilterComponents/Search&FilterComponents";
 import GenreFilter from "../../Components/FilterComponents/Search&FilterComponents/GenreFilter";
+import { useFilter } from "../../Components/FilterComponents/FilterContext";
 
 export default function Movies() {
- 
-
+  const { filterData } = useFilter();
 
   return (
     <>
       <div className="d-flex flex-wrap align-items-center justify-content-center  row-col-2">
-        {filteredMovies.length > 0 ? (
-          filteredMovies.map((Movie: IMovieTypes) => (
+        {filterData.length > 0 ? (
+          filterData.map((Movie: IMovieTypes) => (
             <MovieCard key={Movie.id} {...Movie} />
           ))
         ) : (
