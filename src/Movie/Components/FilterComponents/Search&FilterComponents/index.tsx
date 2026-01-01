@@ -1,3 +1,5 @@
+import { FormControl, InputGroup } from "react-bootstrap";
+
 export default function SearchFilter({
   Title = "Bollywod Hits",
   searchText,

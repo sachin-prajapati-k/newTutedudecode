@@ -11,7 +11,7 @@ const FilterContext = createContext<any>(null);
 export function FilterProvider({ children }: { children: React.ReactNode }) {
   const [category, setCategory] = useState<Category>("All");
   const [search, setSearch] = useState("");
-  const [genre, setGenre] = useState("All");
+  const [genre, setGenre] = useState("all");
 
   const rawData = useMemo(() => {
     if (category === "Movies") return MovieData;
@@ -40,7 +40,7 @@ export function FilterProvider({ children }: { children: React.ReactNode }) {
         item.cast?.some((c: string) => c.toLowerCase().includes(searchLower));
 
       const matchesGenre =
-        genre === "All" ||
+        genre === "all" ||
         item.genre?.some((g: string) => g.toLowerCase().includes(genre));
 
       return matchesSearch && matchesGenre;

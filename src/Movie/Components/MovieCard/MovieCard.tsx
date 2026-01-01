@@ -12,9 +12,14 @@ export default function MovieCard({ ...MovieData }: IMovieTypes) {
     description,
     poster_url,
     language,
+    watch_url,
+    trailer_url,
   } = MovieData;
+  const handleClick = () => {
+    return trailer_url;
+  };
   const ratingValue = imdb_rating ?? popularity;
-  const ratingScale:any = imdb_rating ? "IMDB_Rating" : "Popularity";
+  const ratingScale: any = imdb_rating ? "IMDB_Rating" : "Popularity";
   const buttonColor = (
     value: string | number | undefined,
     ratingScale: IRating
@@ -31,16 +36,26 @@ export default function MovieCard({ ...MovieData }: IMovieTypes) {
 
   return (
     <>
-      <div className=" m-sm-2 m-lg-5 col-lg-2 mt-3 col-xm-3  ">
+      <div
+        className=" m-sm-2 m-lg-5 col-lg-2 mt-3 col-xm-3  "
+        onClick={handleClick}
+      >
         <div className="card card-box h-100">
-          <div className="card-header fw-bold ">{title}</div>
-          <div className="card-img-top poster-img m-0">
-            {poster_url ? (
-              <img src={poster_url} alt="Poster" className="Movie-img" />
-            ) : (
-              ""
-            )}
-          </div>
+          <a
+            href={watch_url}
+            style={{ textDecoration: "none" }}
+            target="blank"
+            rel="noopener noreferrer"
+          >
+            <div className="card-header fw-bold ">{title}</div>
+            <div className="card-img-top poster-img m-0">
+              {poster_url ? (
+                <img src={poster_url} alt="Poster" className="Movie-img" />
+              ) : (
+                ""
+              )}
+            </div>
+          </a>
           <div className="card-body justify-content-center pt-0">
             <span>
               {language} ({genre?.join(", ")})
@@ -54,6 +69,7 @@ export default function MovieCard({ ...MovieData }: IMovieTypes) {
                   backgroundColor: buttonColor(ratingValue, ratingScale),
                   color: "black",
                 }}
+                onClick={() => window.open(trailer_url, "_blank")}
               >
                 {ratingScale}: {ratingValue} / 10
               </Button>
