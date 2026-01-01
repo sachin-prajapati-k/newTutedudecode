@@ -40,7 +40,7 @@ export function FilterProvider({ children }: { children: React.ReactNode }) {
         item.cast?.some((c: string) => c.toLowerCase().includes(searchLower));
 
       const matchesGenre =
-        genre === "all" ||
+        genre === "All" ||
         item.genre?.some((g: string) => g.toLowerCase().includes(genre));
 
       return matchesSearch && matchesGenre;

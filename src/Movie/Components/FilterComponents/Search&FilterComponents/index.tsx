@@ -20,8 +20,11 @@ export default function SearchFilter({
           />
         </div>
         <p className="mt-1">
-          Found {searchlenght} result{searchlenght !== 1 ? "s" : ""} for "
-          {searchText}"
+          {searchText
+            ? `Found ${searchlenght}  ${
+                searchlenght !== 1 ? "results" : "result"
+              } for "${searchText}"`
+            : ""}
         </p>
       </div>
     </>

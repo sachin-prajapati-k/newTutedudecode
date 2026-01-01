@@ -44,6 +44,8 @@ background-clip: text;
   box-shadow: 0px 1px 5px 2px rgb(0, 0, 0);
   scale: 1.1;
   transition: 0.1s;
+  font-weight: 700;
+  color: black;
 }
 
 .filter-btn{
