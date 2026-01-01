@@ -6,6 +6,7 @@ import WebSeries from "../Movie/Pages/WebSeriesHomePag";
 import TvShows from "../Movie/Pages/TvShowsPage";
 import FilterBox from "../Movie/Components/FilterComponents/Filter&ShortBox";
 import { FilterProvider } from "../Movie/Components/FilterComponents/FilterContext";
+import Songs from "../Movie/Pages/SongsPage";
 
 export default function MyRouting() {
   return (
@@ -19,6 +20,7 @@ export default function MyRouting() {
           <Route path="/movies" element={<Movies />} />
           <Route path="/web-series" element={<WebSeries />} />
           <Route path="/tv-shows" element={<TvShows />} />
+          <Route path="/songs" element={<Songs />} />
         </Routes>
       </Router>
     </FilterProvider>

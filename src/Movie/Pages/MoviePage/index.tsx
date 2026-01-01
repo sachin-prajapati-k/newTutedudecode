@@ -9,8 +9,8 @@ export default function Movies() {
     <>
       <div className="d-flex flex-wrap align-items-center justify-content-center  row-col-2">
         {filterData.length > 0 ? (
-          filterData.map((Movie: IMovieTypes) => (
-            <MovieCard key={Movie.id} {...Movie} />
+          filterData.map((item: IMovieTypes) => (
+            <MovieCard key={item.id} {...item} />
           ))
         ) : (
           <div className="text-center mt-4 " style={{ color: "rosybrown" }}>

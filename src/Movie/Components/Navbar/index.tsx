@@ -62,6 +62,16 @@ export default function NavBar() {
               TV Shows
             </Link>
           </Button>
+          <Button
+            className={`nav-item col-auto  btn-round ${
+              category === "Songs" ? "active" : ""
+            }`}
+            onClick={() => setCategory("Songs")}
+          >
+            <Link to="/songs" className="nav-link">
+              Songs
+            </Link>
+          </Button>
           {/* </div> */}
         </ButtonGroup>
       </div>
