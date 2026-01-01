@@ -20,7 +20,7 @@ export default function NavBar() {
             </div>
           </Link>
         </div>
-        <ButtonGroup className="active-btn  gap-2 row d-flex-sm me-4 ">
+        <ButtonGroup className="active-btn  gap-2 row d-flex-sm me-lg-4 size-sm custom-button-sm">
           {/* <div className=" gap-2 row  me-4 "> */}
           <Button
             className={`nav-item col-auto  btn-round ${

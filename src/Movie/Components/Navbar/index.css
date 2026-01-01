@@ -95,3 +95,11 @@ margin-bottom: 5px;
     flex-wrap: wrap;
   }
 }
+
+
+@media (max-width : 576px){
+  .custom-button-sm Button{
+    padding: 6px;
+    font-size: 11px;
+  }
+}
