@@ -12,7 +12,7 @@ export default function MovieCard({ ...MovieData }: IMovieTypes) {
     poster_url,
     language,
   } = MovieData;
-  const buttonColor = (imdb_rating: string | number): string => {
+  const buttonColor = (imdb_rating: string | number | undefined): string => {
     const rating = Number(imdb_rating);
 
     if (Number.isNaN(rating)) return "gray";

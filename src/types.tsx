@@ -21,7 +21,7 @@ export interface IMovieTypes {
   language?: string;
   duration_minutes?: number;
   rating?: string;
-  imdb_rating?: number;
+  imdb_rating?: number | string | undefined;
   director?: string;
   cast?: string[];
   description?: string;
