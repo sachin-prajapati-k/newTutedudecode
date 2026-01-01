@@ -8,7 +8,7 @@ export default function NavBar() {
   const { category, setCategory } = useFilter();
   return (
     <>
-      <div className="container-fluid bg-purple-custom d-flex flex-wrap-sm  align-items-center justify-content-between h-100 p-3 ">
+      <div className="container-fluid bg-purple-custom d-flex flex-wrap gap-2 justify-content-center justify-content-sm-between h-100 p-3 ">
         <div className="site-brand align-items-center d-flex gap-2">
           <Link
             to="/"
@@ -20,7 +20,7 @@ export default function NavBar() {
             </div>
           </Link>
         </div>
-        <ButtonGroup className="active-btn  gap-2 row  me-4">
+        <ButtonGroup className="active-btn  gap-2 row d-flex-sm me-4 ">
           {/* <div className=" gap-2 row  me-4 "> */}
           <Button
             className={`nav-item col-auto  btn-round ${

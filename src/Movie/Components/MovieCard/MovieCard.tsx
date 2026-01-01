@@ -31,7 +31,7 @@ export default function MovieCard({ ...MovieData }: IMovieTypes) {
 
   return (
     <>
-      <div className=" m-sm-2 m-lg-5 col-lg-2 col-xm-3 ">
+      <div className=" m-sm-2 m-lg-5 col-lg-2 mt-3 col-xm-3  ">
         <div className="card card-box h-100">
           <div className="card-header fw-bold ">{title}</div>
           <div className="card-img-top poster-img m-0">

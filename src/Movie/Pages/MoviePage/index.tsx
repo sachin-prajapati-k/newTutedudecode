@@ -7,7 +7,7 @@ export default function Movies() {
 
   return (
     <>
-      <div className="d-flex flex-wrap align-items-center justify-content-center  row-col-2">
+      <div className="d-flex flex-wrap">
         {filterData.length > 0 ? (
           filterData.map((item: IMovieTypes) => (
             <MovieCard key={item.id} {...item} />
