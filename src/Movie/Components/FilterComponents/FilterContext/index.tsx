@@ -12,7 +12,7 @@ export function FilterProvider({ children }: { children: React.ReactNode }) {
   const [category, setCategory] = useState<Category>("All");
   const [search, setSearch] = useState("");
   const [genre, setGenre] = useState("all");
-  const [sort, setSort] = useState("genre");
+  const [sort, setSort] = useState(" ");
 
   const rawData = useMemo(() => {
     if (category === "Movies") return MovieData;
@@ -44,9 +44,7 @@ export function FilterProvider({ children }: { children: React.ReactNode }) {
         genre === "all" ||
         item.genre?.some((g: string) => g.toLowerCase().includes(genre));
 
-      const sortData = [...rawData].sort(
-        (a: any, b: any) => b.description[0] - a.description[0]
-      );
+      const sortData = [...rawData].sort((a: any, b: any) => a.genre - b.genre);
       return matchesSearch && matchesGenre && sortData;
     });
   }, [rawData, search, genre, sort]);

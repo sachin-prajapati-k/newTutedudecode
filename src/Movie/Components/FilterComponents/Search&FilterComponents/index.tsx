@@ -1,4 +1,4 @@
-import { FormControl, InputGroup } from "react-bootstrap";
+import { FormControl } from "react-bootstrap";
 import { useFilter } from "../FilterContext";
 
 export default function SearchFilter({
@@ -6,8 +6,8 @@ export default function SearchFilter({
   searchText,
   setSearchText,
   searchlenght,
+  setSort,
 }: any) {
-  const {setSort}=useFilter();
   return (
     <>
       <div className="mt-3 container flex-column align-items-center text-white p-0">
@@ -22,8 +22,8 @@ export default function SearchFilter({
             value={searchText}
             onChange={(e) => setSearchText(e.target.value)}
           />
-          <FormControl as='select'  >
-            <option onClick={()=>setSort('genre')} >hello</option>
+          <FormControl as="select">
+            <option onClick={() => setSort("genre")}>hello</option>
             <option>key</option>
           </FormControl>
         </div>
