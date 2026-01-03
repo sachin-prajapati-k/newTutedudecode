@@ -1,5 +1,4 @@
 import { FormControl } from "react-bootstrap";
-import { useFilter } from "../FilterContext";
 
 export default function SearchFilter({
   Title = "Bollywod Hits",
@@ -23,8 +22,10 @@ export default function SearchFilter({
             onChange={(e) => setSearchText(e.target.value)}
           />
           <FormControl as="select">
-            <option onClick={() => setSort("genre")}>hello</option>
-            <option>key</option>
+            <option onClick={() => setSort("genre")}>Genre</option>
+            <option onClick={()=>setSort("name")}>Name</option>
+            <option onClick={()=>setSort("year")}>Year</option>
+          
           </FormControl>
         </div>
         <p className="mt-1">
