@@ -3,7 +3,7 @@ import SearchFilter from "../Search&FilterComponents";
 import GenreFilter from "../Search&FilterComponents/GenreFilter";
 
 export default function FilterBox() {
-  const { search, setSearch, setGenre, searchlenght, genres, setSort } =
+  const { search, setSearch, setGenre, searchlenght, genres, sort, setSort } =
     useFilter();
   return (
     <>
@@ -11,6 +11,7 @@ export default function FilterBox() {
         searchText={search}
         setSearchText={setSearch}
         searchlenght={searchlenght}
+        sort={sort}
         setSort={setSort}
       />
       <GenreFilter genres={genres} handleFilterButton={setGenre} />

@@ -47,7 +47,7 @@ export default function MovieCard({ ...MovieData }: IMovieTypes) {
             target="blank"
             rel="noopener noreferrer"
           >
-            <div className="card-header fw-bold ">{title}</div>
+            <div className="card-header fs-5 fw-bold " style={{color:'orange'}}>{title}</div>
             <div className="card-img-top poster-img m-0">
               {poster_url ? (
                 <img src={poster_url} alt="Poster" className="Movie-img" />

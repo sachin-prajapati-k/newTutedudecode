@@ -5,6 +5,7 @@ export default function SearchFilter({
   searchText,
   setSearchText,
   searchlenght,
+  sort,
   setSort,
 }: any) {
   return (
@@ -21,12 +22,16 @@ export default function SearchFilter({
             value={searchText}
             onChange={(e) => setSearchText(e.target.value)}
           />
-          <FormControl as="select">
-            <option onClick={() => setSort("genre")}>Genre</option>
-            <option onClick={()=>setSort("name")}>Name</option>
-            <option onClick={()=>setSort("year")}>Year</option>
-          
-          </FormControl>
+          <select
+            className="form-select w-25"
+            value={sort || ""}
+            onChange={(e) => setSort(e.target.value)}
+          >
+            <option value="">Sort by...</option>
+            <option value="genre">Genre</option>
+            <option value="name">Name</option>
+            <option value="year">Year</option>
+          </select>
         </div>
         <p className="mt-1">
           {searchText
