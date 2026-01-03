@@ -14,7 +14,7 @@ export default function SearchFilter({
         <div className="m-0">
           <h1 style={{ color: "yellow" }}>{Title}</h1>
         </div>
-        <div className="container p-0 justify-content-center">
+        <div className="container p-0 justify-content-center gap-2">
           <input
             className="form-control w-50 w-lg-50 w-sm-25"
             type="text"
@@ -23,7 +23,7 @@ export default function SearchFilter({
             onChange={(e) => setSearchText(e.target.value)}
           />
           <select
-            className="form-select w-25"
+            className="form-select" style={{width:"150px"}}
             value={sort || ""}
             onChange={(e) => setSort(e.target.value)}
           >
