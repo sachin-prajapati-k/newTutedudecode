@@ -1,3 +1,4 @@
+import '../../Navbar/index.css'
 export default function SearchFilter({
   Title = "Bollywod Hits",
   searchText,
@@ -21,7 +22,7 @@ export default function SearchFilter({
             onChange={(e) => setSearchText(e.target.value)}
           />
           <select
-            className="form-select"
+            className="form-select select-style"
             style={{ width: "150px" }}
             value={sort || ""}
             onChange={(e) => setSort(e.target.value)}

@@ -1,8 +1,8 @@
 import React, { createContext, useContext, useMemo, useState } from "react";
-import { MovieData } from "../../../MovieData.tsx/MovieData";
-import { WebSeriesData } from "../../../MovieData.tsx/WebSeriesData";
-import { TVShowsData } from "../../../MovieData.tsx/TvShowsData";
-import { SongsData } from "../../../MovieData.tsx/SongsData";
+import { MovieData } from "../../../MovieData/MovieData";
+import { WebSeriesData } from "../../../MovieData/WebSeriesData";
+import { TVShowsData } from "../../../MovieData/TvShowsData";
+import { SongsData } from "../../../MovieData/SongsData";
 
 type Category = "All" | "Movies" | "Songs" | "Web-Series" | "Tv-Shows";
 
