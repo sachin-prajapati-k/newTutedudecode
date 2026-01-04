@@ -21,7 +21,8 @@ export default function SearchFilter({
             onChange={(e) => setSearchText(e.target.value)}
           />
           <select
-            className="form-select" style={{width:"150px"}}
+            className="form-select"
+            style={{ width: "150px" }}
             value={sort || ""}
             onChange={(e) => setSort(e.target.value)}
           >
